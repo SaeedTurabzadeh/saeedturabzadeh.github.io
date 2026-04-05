@@ -177,19 +177,29 @@
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
+      try {
+        const cfgEl = swiperElement.querySelector(".swiper-config");
+        if (!cfgEl || typeof Swiper === "undefined") return;
+        const raw = (cfgEl.textContent || "").trim();
+        let config = JSON.parse(raw);
+        if (swiperElement.classList.contains("swiper-tab")) {
+          initSwiperWithCustomPagination(swiperElement, config);
+        } else {
+          const swiper = new Swiper(swiperElement, config);
+          requestAnimationFrame(function() {
+            swiper.update();
+            if (swiper.params.loop && swiper.loopFix) swiper.loopFix();
+          });
+        }
+      } catch (e) {
+        console.error("Swiper init failed:", e);
       }
     });
   }
 
-  window.addEventListener("load", initSwiper);
+  window.addEventListener("load", function() {
+    setTimeout(initSwiper, 100);
+  });;
 
   /**
    * Frequently Asked Questions Toggle
