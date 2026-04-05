@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saeed Turabzadeh - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --default-color: #314862;
+      --heading-color: #13447f;
+      --accent-color: #065cc2;
+      --light-bg: #f7faff;
+      --border-color: #e0e8f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--default-color);
+      background: var(--background-color);
+      font-size: 10pt;
+      line-height: 1.4;
+    }
+
+    /* Page Structure */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: white;
+      position: relative;
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    /* Header - Page 1 */
+    .cv-header {
+      background: linear-gradient(135deg, var(--heading-color) 0%, var(--accent-color) 100%);
+      color: white;
+      padding: 25px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 26pt;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: white;
+    }
+
+    .header-left .title {
+      font-size: 13pt;
+      font-weight: 400;
+      opacity: 0.95;
+    }
+
+    .header-left .credentials {
+      font-size: 9pt;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 9pt;
+    }
+
+    .header-right .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 5px;
+      gap: 8px;
+    }
+
+    /* Page 2 Header */
+    .page-header {
+      background: var(--heading-color);
+      color: white;
+      padding: 12px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-header h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14pt;
+      font-weight: 600;
+      color: white;
+    }
+
+    .page-header .page-num {
+      font-size: 9pt;
+      opacity: 0.8;
+    }
+
+    /* Main Content */
+    .cv-main {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 0;
+      min-height: calc(297mm - 85px);
+    }
+
+    .page-2-content {
+      padding: 25px 35px;
+    }
+
+    .cv-left {
+      padding: 20px 25px;
+    }
+
+    .cv-right {
+      background: var(--light-bg);
+      padding: 20px;
+      border-left: 2px solid var(--accent-color);
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid var(--accent-color);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 16px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    /* Summary */
+    .summary p {
+      font-size: 9.5pt;
+      line-height: 1.5;
+      color: var(--default-color);
+    }
+
+    /* Experience */
+    .experience-item {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .experience-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+
+    .experience-header h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    .experience-header .company {
+      font-size: 9.5pt;
+      color: var(--accent-color);
+      font-weight: 500;
+    }
+
+    .experience-header .duration {
+      font-size: 8.5pt;
+      color: #666;
+      background: var(--light-bg);
+      padding: 2px 8px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .experience-item ul {
+      margin: 6px 0 0 16px;
+      font-size: 9pt;
+    }
+
+    .experience-item li {
+      margin-bottom: 3px;
+      line-height: 1.4;
+    }
+
+    /* Education */
+    .education-item {
+      margin-bottom: 12px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent-color);
+    }
+
+    .education-item h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    .education-item .institution {
+      font-size: 9pt;
+      color: var(--accent-color);
+      font-weight: 500;
+    }
+
+    .education-item .year {
+      font-size: 8.5pt;
+      color: #666;
+    }
+
+    .education-item p {
+      font-size: 8.5pt;
+      margin-top: 3px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Skills */
+    .skills-category {
+      margin-bottom: 12px;
+    }
+
+    .skills-category h4 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin-bottom: 5px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .skill-tag {
+      background: white;
+      color: var(--accent-color);
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 8pt;
+      border: 1px solid var(--accent-color);
+    }
+
+    /* Key Stats */
+    .key-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .stat-box {
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+    }
+
+    .stat-box .number {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 16pt;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    .stat-box .label {
+      font-size: 7.5pt;
+      color: #666;
+      display: block;
+    }
+
+    /* Memberships */
+    .membership-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .membership-badge {
+      background: var(--accent-color);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 8.5pt;
+      font-weight: 500;
+    }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .project-item:last-child {
+      border-bottom: none;
+    }
+
+    .project-item h4 {
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin-bottom: 3px;
+    }
+
+    .project-item .tech {
+      font-size: 8pt;
+      color: var(--accent-color);
+      margin-bottom: 3px;
+    }
+
+    .project-item p {
+      font-size: 8.5pt;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Publications */
+    .publication-item {
+      font-size: 8.5pt;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border-left: 2px solid var(--accent-color);
+      line-height: 1.4;
+    }
+
+    .publication-item .pub-title {
+      font-weight: 600;
+      color: var(--heading-color);
+    }
+
+    .publication-item .pub-venue {
+      font-style: italic;
+      color: #666;
+    }
+
+    /* Two column layout for page 2 */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    /* Core Competencies */
+    .competency-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .competency-item {
+      background: var(--light-bg);
+      padding: 10px;
+      border-radius: 6px;
+      border-left: 3px solid var(--accent-color);
+    }
+
+    .competency-item h4 {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--heading-color);
+      margin-bottom: 4px;
+    }
+
+    .competency-item p {
+      font-size: 8pt;
+      color: #555;
+      line-height: 1.3;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        page-break-after: always;
+      }
+
+      .cv-header, .page-header {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- PAGE 1 -->
+  <div class="page">
+    <!-- Header -->
+    <header class="cv-header">
+      <div class="header-left">
+        <h1>Saeed Turabzadeh</h1>
+        <div class="title">Perception Technical Lead</div>
+        <div class="credentials">BEng, MPhil, MIET, MIEEE</div>
+      </div>
+      <div class="header-right">
+        <div class="contact-item">
+          <span>London, UK</span>
+        </div>
+        <div class="contact-item">
+          <span>linkedin.com/in/saeedturabzadeh</span>
+        </div>
+        <div class="contact-item">
+          <span>github.com/saeedturabzadeh</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="cv-main">
+      <!-- Left Column -->
+      <div class="cv-left">
+        <!-- Summary -->
+        <div class="section summary">
+          <h2 class="section-title">Professional Summary</h2>
+          <p>Perception Technical Lead with 13+ years of experience in real-time software development, computer vision, and applied machine learning. Specialized in 2D/3D perception, sensor fusion, and embedded systems for robotics and autonomous vehicles. 7+ years leading cross-functional engineering teams across international projects in the UK, UAE, and Southeast Asia, delivering production-grade autonomous solutions from concept to deployment.</p>
+        </div>
+
+        <!-- Experience -->
+        <div class="section experience">
+          <h2 class="section-title">Professional Experience</h2>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Perception Technical Lead</h3>
+                <div class="company">Auriga, London, UK</div>
+              </div>
+              <span class="duration">Jun 2025 - Present</span>
+            </div>
+            <ul>
+              <li>Leading perception team for autonomous vehicle development with full technical ownership</li>
+              <li>Developing end-to-end perception pipelines including object detection, tracking, and scene understanding</li>
+              <li>Architecting scalable perception systems for multi-sensor fusion (LiDAR, camera, radar)</li>
+              <li>Defining technical roadmap, testing frameworks, and validation strategies for production deployment</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Senior Autonomy Engineer</h3>
+                <div class="company">Aidrivers, London, UK</div>
+              </div>
+              <span class="duration">Nov 2021 - May 2025</span>
+            </div>
+            <ul>
+              <li>Led development of scalable, real-time autonomous mobility solutions across international projects (Singapore, Malaysia, Sri Lanka, UAE)</li>
+              <li>Directed software architecture, sensor integration, and multi-platform deployment for autonomous terminal trucks</li>
+              <li>Managed cross-functional teams of 8+ engineers across perception, planning, and controls</li>
+              <li>Designed and implemented chassis alignment system using LiDAR/camera fusion achieving 99% accuracy</li>
+              <li>Developed Ship Profile Scanning System (SPSS) for automated vessel profiling and crane automation</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Perception Engineer</h3>
+                <div class="company">Aidrivers, London, UK</div>
+              </div>
+              <span class="duration">Nov 2018 - Nov 2021</span>
+            </div>
+            <ul>
+              <li>Developed 2D/3D perception systems for autonomous terminal trucks operating in port environments</li>
+              <li>Led sensor fusion and calibration for multi-modal sensing (LiDAR, camera, IMU, GPS)</li>
+              <li>Implemented real-time object detection, tracking, and classification using deep learning (YOLO, PointPillars)</li>
+              <li>Built point cloud processing pipelines using PCL for obstacle detection and ground segmentation</li>
+              <li>Optimized neural networks for embedded deployment using TensorRT achieving 30Hz inference</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3>Computer Vision Engineer</h3>
+                <div class="company">Brunel University London, UK</div>
+              </div>
+              <span class="duration">Sep 2015 - Oct 2018</span>
+            </div>
+            <ul>
+              <li>Developed facial expression recognition systems for real-time emotion analysis</li>
+              <li>Implemented Action Unit detection algorithms using deep learning and traditional ML</li>
+              <li>Published 4 peer-reviewed papers in computer vision and embedded systems</li>
+              <li>Contributed to WIZO humanoid robot project - world's first 3D printed humanoid</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="cv-right">
+        <!-- Key Stats -->
+        <div class="key-stats">
+          <div class="stat-box">
+            <span class="number">13+</span>
+            <span class="label">Years Experience</span>
+          </div>
+          <div class="stat-box">
+            <span class="number">7+</span>
+            <span class="label">Years in Autonomy</span>
+          </div>
+          <div class="stat-box">
+            <span class="number">4</span>
+            <span class="label">Publications</span>
+          </div>
+          <div class="stat-box">
+            <span class="number">4+</span>
+            <span class="label">Countries</span>
+          </div>
+        </div>
+
+        <!-- Professional Memberships -->
+        <div class="section">
+          <h2 class="section-title">Memberships</h2>
+          <div class="membership-badges">
+            <span class="membership-badge">MIET</span>
+            <span class="membership-badge">MIEEE</span>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+          <h2 class="section-title">Technical Skills</h2>
+
+          <div class="skills-category">
+            <h4>Programming Languages</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">CUDA</span>
+              <span class="skill-tag">Bash</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Robotics & Middleware</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">ROS</span>
+              <span class="skill-tag">ROS2</span>
+              <span class="skill-tag">Autoware</span>
+              <span class="skill-tag">Apollo</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Deep Learning & AI</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">TensorRT</span>
+              <span class="skill-tag">ONNX</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Computer Vision</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">PCL</span>
+              <span class="skill-tag">Open3D</span>
+              <span class="skill-tag">SLAM</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Sensors & Hardware</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">LiDAR</span>
+              <span class="skill-tag">Camera</span>
+              <span class="skill-tag">Radar</span>
+              <span class="skill-tag">IMU</span>
+              <span class="skill-tag">NVIDIA Jetson</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Tools & Infrastructure</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Preview -->
+        <div class="section">
+          <h2 class="section-title">Education</h2>
+
+          <div class="education-item">
+            <h3>MPhil Electronic & Computer Eng.</h3>
+            <div class="institution">Brunel University London</div>
+            <div class="year">2013 - 2015</div>
+          </div>
+
+          <div class="education-item">
+            <h3>BEng Electronic Engineering</h3>
+            <div class="institution">Azad University, Iran</div>
+            <div class="year">2007 - 2012</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <header class="page-header">
+      <h2>Saeed Turabzadeh - CV</h2>
+      <span class="page-num">Page 2 of 2</span>
+    </header>
+
+    <div class="page-2-content">
+      <!-- Key Projects -->
+      <div class="section">
+        <h2 class="section-title">Key Projects</h2>
+
+        <div class="two-col">
+          <div>
+            <div class="project-item">
+              <h4>Autonomous Terminal Trucks (ATT)</h4>
+              <div class="tech">C++, Python, ROS, LiDAR, Camera, Sensor Fusion</div>
+              <p>Led development of autonomous driving systems for port terminal operations across Singapore, Malaysia, Sri Lanka, and UAE. Implemented end-to-end perception, planning, and control modules for real-time autonomous navigation. Achieved successful deployment with 24/7 operation in production environments.</p>
+            </div>
+
+            <div class="project-item">
+              <h4>Chassis Alignment System (CAS)</h4>
+              <div class="tech">C++, Python, OpenCV, PCL, LiDAR, Camera</div>
+              <p>Developed LiDAR and camera-based system for real-time chassis alignment, enabling precise container handling automation. Achieved 99% alignment accuracy with sub-centimeter precision, reducing manual intervention by 80%.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="project-item">
+              <h4>Ship Profile Scanning System (SPSS)</h4>
+              <div class="tech">C++, Python, PCL, Point Cloud Processing</div>
+              <p>Architected 3D point cloud processing pipeline for vessel scanning, detecting container stacks and vessel structures. Enabled automated crane operation planning with 99.5% detection accuracy and 30-second scan processing time.</p>
+            </div>
+
+            <div class="project-item">
+              <h4>Humanoid Robot (WIZO)</h4>
+              <div class="tech">Python, OpenCV, Deep Learning, NLP</div>
+              <p>World's first 3D printed humanoid robot. Developed embedded vision systems for real-time object and facial recognition with 95%+ accuracy. Integrated NLP for natural human-robot interaction. Received international recognition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div class="section">
+        <h2 class="section-title">Publications</h2>
+
+        <div class="publication-item">
+          <span class="pub-title">Facial Expression Emotion Detection for Real-Time Embedded Systems</span><br>
+          <span class="pub-venue">MDPI Technologies Journal, 2018</span>
+        </div>
+
+        <div class="publication-item">
+          <span class="pub-title">Real-time Emotional State Detection from Facial Expression on Embedded Devices</span><br>
+          <span class="pub-venue">INTECH Conference, 2017</span>
+        </div>
+
+        <div class="publication-item">
+          <span class="pub-title">Facial Expression Based Continuous Emotional State Monitoring with GPU Acceleration</span><br>
+          <span class="pub-venue">IEEE Conference, 2017</span>
+        </div>
+
+        <div class="publication-item">
+          <span class="pub-title">Embedded Implementation of a Deep Learning Smile Detector</span><br>
+          <span class="pub-venue">International Conference on Deep Learning, 2017</span>
+        </div>
+      </div>
+
+      <!-- Core Competencies -->
+      <div class="section">
+        <h2 class="section-title">Core Competencies</h2>
+
+        <div class="competency-grid">
+          <div class="competency-item">
+            <h4>Technical Leadership</h4>
+            <p>Leading cross-functional teams, defining technical roadmaps, code reviews, architecture decisions, mentoring junior engineers</p>
+          </div>
+
+          <div class="competency-item">
+            <h4>Perception Systems</h4>
+            <p>2D/3D object detection, tracking, classification, scene understanding, semantic segmentation, depth estimation</p>
+          </div>
+
+          <div class="competency-item">
+            <h4>Sensor Fusion</h4>
+            <p>Multi-modal sensor fusion (LiDAR, camera, radar), calibration, synchronization, point cloud processing</p>
+          </div>
+
+          <div class="competency-item">
+            <h4>Deep Learning</h4>
+            <p>CNN, Transformer architectures, model training, optimization, quantization, embedded deployment</p>
+          </div>
+
+          <div class="competency-item">
+            <h4>Autonomous Systems</h4>
+            <p>Localization, mapping, path planning, motion control, state estimation, behavior prediction</p>
+          </div>
+
+          <div class="competency-item">
+            <h4>Production Deployment</h4>
+            <p>Real-time systems, embedded platforms, CI/CD, testing frameworks, safety-critical software</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Info -->
+      <div class="two-col" style="margin-top: 20px;">
+        <div class="section">
+          <h2 class="section-title">Awards & Recognition</h2>
+          <div class="publication-item">
+            <span class="pub-title">Best MPhil Research Paper Award</span><br>
+            <span class="pub-venue">Brunel University London, 2014 - Outstanding research contribution in facial expression analysis</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Languages</h2>
+          <div style="font-size: 9pt;">
+            <p><strong>English:</strong> Fluent (Professional)</p>
+            <p><strong>Persian (Farsi):</strong> Native</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Interests -->
+      <div class="section">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="skill-tags" style="gap: 8px;">
+          <span class="skill-tag">Autonomous Vehicles</span>
+          <span class="skill-tag">3D Perception</span>
+          <span class="skill-tag">Multi-Modal Sensor Fusion</span>
+          <span class="skill-tag">Real-Time Deep Learning</span>
+          <span class="skill-tag">Embedded AI</span>
+          <!-- <span class="skill-tag">Scene Understanding</span> -->
+          <!-- <span class="skill-tag">SLAM</span> -->
+          <span class="skill-tag">Motion Prediction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
