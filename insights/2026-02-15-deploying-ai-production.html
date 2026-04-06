@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>LiDAR vs Camera: Choosing the Right Sensors for Your Application | Saeed Turabzadeh</title>
-  <meta name="description" content="A practical guide to selecting sensors for autonomous systems based on real-world deployment experience.">
+  <title>Deploying AI Models in Production: Lessons from the Field | Saeed Turabzadeh</title>
+  <meta name="description" content="Practical lessons on deploying deep learning models in real-time safety-critical systems.">
 
   <!-- Favicons -->
   <link href="../assets/img/favicon.png" rel="icon">
@@ -32,16 +32,16 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
       <a href="../index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">Saeed Turabzadeh</h1>
+        <h1 class="sitename">ST</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="../index.html#hero">Home</a></li>
           <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#resume">Resume</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
           <li><a href="../index.html#portfolio">Projects</a></li>
           <li><a href="../index.html#publications">Publications</a></li>
-          <li><a href="../index.html#blog">Blog</a></li>
+          <li><a href="../index.html#insights">Insights</a></li>
           <li><a href="../index.html#endorsements">Endorsements</a></li>
           <li><a href="../index.html#contact">Contact</a></li>
         </ul>
@@ -55,11 +55,11 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">LiDAR vs Camera</h1>
+        <h1 class="mb-2 mb-lg-0">Deploying AI in Production</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="../index.html">Home</a></li>
-            <li class="current">Blog Post</li>
+            <li class="current">Insight</li>
           </ol>
         </nav>
       </div>
@@ -101,7 +101,7 @@
                   </script>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="../assets/img/portfolio/portfolio-5.webp" alt="LiDAR vs Camera" class="img-fluid">
+                      <img src="../assets/img/portfolio/insight-ai-deployment.webp" alt="AI Deployment" class="img-fluid">
                     </div>
                   </div>
                   <div class="swiper-button-prev"></div>
@@ -110,10 +110,10 @@
               </div>
 
               <div class="tech-stack-badges" data-aos="fade-up" data-aos-delay="300">
-                <span>LiDAR</span>
-                <span>Computer Vision</span>
-                <span>Sensor Fusion</span>
-                <span>Radar</span>
+                <span>Deep Learning</span>
+                <span>Production</span>
+                <span>MLOps</span>
+                <span>TensorRT</span>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@
                 <div class="date-client">
                   <div class="meta-item">
                     <i class="bi bi-calendar-check"></i>
-                    <span>March 5, 2026</span>
+                    <span>February 15, 2026</span>
                   </div>
                   <div class="meta-item">
                     <i class="bi bi-person"></i>
@@ -136,23 +136,23 @@
                 </div>
               </div>
 
-              <h2 class="project-title">LiDAR vs Camera: Choosing the Right Sensors</h2>
+              <h2 class="project-title">Deploying AI Models in Production: Lessons from the Field</h2>
 
               <div class="project-overview">
                 <p class="lead">
-                  A practical guide to selecting sensors for autonomous systems based on real-world deployment experience across diverse environments.
+                  Training a deep learning model is only half the battle. Deploying it in a real-time, safety-critical system is where the real challenges emerge.
                 </p>
 
                 <div class="accordion project-accordion" id="blogAccordion">
                   <div class="accordion-item" data-aos="fade-up">
                     <h2 class="accordion-header">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true">
-                        <i class="bi bi-diagram-3 me-2"></i> Understanding the Trade-offs
+                        <i class="bi bi-speedometer2 me-2"></i> Latency is Everything
                       </button>
                     </h2>
                     <div id="collapse-1" class="accordion-collapse collapse show" data-bs-parent="#blogAccordion">
                       <div class="accordion-body">
-                        <p><strong>LiDAR:</strong> Precise depth measurement, works in darkness, immune to visual texture. <strong>Camera:</strong> Rich semantic information, color/texture recognition, lower cost. <strong>Radar:</strong> Weather resilient, velocity measurement, long range.</p>
+                        <p>A model that runs at 100ms in the lab might not be acceptable when you need 30Hz perception. Optimization through TensorRT, quantization, and architecture pruning becomes essential.</p>
                       </div>
                     </div>
                   </div>
@@ -160,12 +160,12 @@
                   <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false">
-                        <i class="bi bi-gear me-2"></i> Real-World Considerations
+                        <i class="bi bi-exclamation-triangle me-2"></i> Edge Cases Will Find You
                       </button>
                     </h2>
                     <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#blogAccordion">
                       <div class="accordion-body">
-                        <p>In port terminal operations, LiDAR excels at precise positioning for container handling, while cameras are essential for reading container IDs and detecting humans. The combination proved more robust than either alone.</p>
+                        <p>No matter how comprehensive your training data, production will expose scenarios you never anticipated. Build monitoring systems that capture these cases for continuous improvement.</p>
                       </div>
                     </div>
                   </div>
@@ -173,12 +173,12 @@
                   <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false">
-                        <i class="bi bi-currency-dollar me-2"></i> Cost vs Performance
+                        <i class="bi bi-shield-check me-2"></i> Graceful Degradation
                       </button>
                     </h2>
                     <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#blogAccordion">
                       <div class="accordion-body">
-                        <p>While cameras are significantly cheaper, the total system cost includes processing, calibration, and maintenance. Sometimes a single high-quality LiDAR is more cost-effective than managing multiple camera systems.</p>
+                        <p>What happens when your model fails? Design fallback behaviors. In autonomous systems, this might mean switching to a simpler but more reliable algorithm or safely stopping.</p>
                       </div>
                     </div>
                   </div>
@@ -190,24 +190,24 @@
                 <div class="row g-3">
                   <div class="col-md-6">
                     <ul class="feature-list">
-                      <li><i class="bi bi-check2-circle"></i> No universal answer</li>
-                      <li><i class="bi bi-check2-circle"></i> Use case driven selection</li>
-                      <li><i class="bi bi-check2-circle"></i> Consider total system cost</li>
+                      <li><i class="bi bi-check2-circle"></i> Optimize for latency</li>
+                      <li><i class="bi bi-check2-circle"></i> Monitor edge cases</li>
+                      <li><i class="bi bi-check2-circle"></i> Design fallbacks</li>
                     </ul>
                   </div>
                   <div class="col-md-6">
                     <ul class="feature-list">
-                      <li><i class="bi bi-check2-circle"></i> Multi-modal is robust</li>
-                      <li><i class="bi bi-check2-circle"></i> Environmental factors</li>
-                      <li><i class="bi bi-check2-circle"></i> Safety requirements</li>
+                      <li><i class="bi bi-check2-circle"></i> Version control all</li>
+                      <li><i class="bi bi-check2-circle"></i> Focus on reliability</li>
+                      <li><i class="bi bi-check2-circle"></i> Graceful failure handling</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
               <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
-                <a href="2026-03-20-leadership-in-tech.html" class="btn-view-project"><i class="bi bi-arrow-left"></i> Previous Post</a>
-                <a href="2026-02-15-deploying-ai-production.html" class="btn-next-project">Next Post <i class="bi bi-arrow-right"></i></a>
+                <a href="2026-03-05-lidar-vs-camera.html" class="btn-view-project"><i class="bi bi-arrow-left"></i> Previous Insight</a>
+                <a href="../index.html#insights" class="btn-next-project">All Insights <i class="bi bi-grid"></i></a>
               </div>
             </div>
           </div>
