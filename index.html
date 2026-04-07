@@ -38,32 +38,14 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <!-- Uncomment the line below if you also wish to use an text logo -->
-        <!-- <h1 class="sitename">Style</h1>  -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Saeed Turabzadeh</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
-
-        <div class="profile-img">
-          <img src="assets/img/profile/profile.jpeg" alt="Saeed Turabzadeh" class="img-fluid rounded-circle">
-        </div>
-
-        <a href="index.html" class="logo d-flex align-items-center justify-content-center active">
-          <h1 class="sitename">ST</h1>
-        </a>
-
-        <div class="social-links text-center">
-          <a href="https://www.linkedin.com/in/saeed-turabzadeh/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/saeedturabzadeh" target="_blank" class="github"><i class="bi bi-github"></i></a>
-          <a href="mailto:saeed.turabzadeh@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
-        </div>
-
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -76,6 +58,12 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
+      <div class="header-social-links">
+        <a href="https://www.linkedin.com/in/saeed-turabzadeh/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/saeedturabzadeh" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="mailto:saeed.turabzadeh@gmail.com"><i class="bi bi-envelope"></i></a>
+      </div>
 
     </div>
   </header>
@@ -820,7 +808,7 @@
     </section><!-- /Publications Section -->
 
     <!-- Insights Section -->
-    <section id="insights" class="portfolio section light-background">
+    <section id="insights" class="insights-section section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -828,139 +816,135 @@
         <p>Insights on perception systems, autonomous vehicles, leadership, and engineering</p>
       </div><!-- End Section Title -->
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <!-- Top Row: 1 Large + 1 Medium -->
+        <div class="row g-4 mb-4">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-            <li data-filter="*" class="filter-active">
-              <i class="bi bi-grid-3x3"></i> All Insights
-            </li>
-            <li data-filter=".filter-tech">
-              Technical
-            </li>
-            <li data-filter=".filter-leadership">
-              Leadership
-            </li>
-          </ul>
-
-          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-tech">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/insight-perception-future.webp" class="img-fluid" alt="Future of Perception" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Technical</div>
-                      <h3 class="entry-title">The Future of Perception Systems</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/insight-perception-future.webp" class="glightbox" data-gallery="blog-gallery" data-glightbox="title: The Future of Perception Systems; description: Exploring the evolution of perception systems and what's next for autonomous vehicles." title="Expand">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="insights/2026-04-05-future-of-perception.html" title="Read More">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-                <div class="project-info mt-3" style="padding: 0 10px;">
-                  <h5>The Future of Perception Systems</h5>
-                  <p class="small text-muted"><i class="bi bi-calendar"></i> April 5, 2026</p>
-                  <p class="small">Exploring the evolution of perception systems and what's next for autonomous vehicles.</p>
+          <!-- Large Post (top-left) -->
+          <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
+            <article class="insight-card insight-card-lg">
+              <a href="insights/2026-04-05-future-of-perception.html" class="card-link-wrapper">
+                <div class="card-img-wrap">
+                  <img src="assets/img/portfolio/insight-perception-future.webp" alt="The Future of Perception Systems" loading="lazy">
                 </div>
-              </article>
-            </div><!-- End Blog Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-leadership">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/insight-leadership.webp" class="img-fluid" alt="Leadership Lessons" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Leadership</div>
-                      <h3 class="entry-title">Leadership Lessons from Engineering Teams</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/insight-leadership.webp" class="glightbox" data-gallery="blog-gallery" data-glightbox="title: Leadership Lessons; description: Key insights from 7+ years of leading engineering teams across international projects." title="Expand">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="insights/2026-03-20-leadership-in-tech.html" title="Read More">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
+                <div class="card-body-overlay">
+                  <span class="card-badge">Technical</span>
+                  <h3>The Future of Perception Systems in Autonomous Vehicles</h3>
+                  <p class="card-excerpt">Exploring the evolution of perception systems and what's next for autonomous vehicles.</p>
+                  <div class="card-meta">
+                    <span><i class="bi bi-calendar3"></i> April 5, 2026</span>
+                    <span><i class="bi bi-person"></i> Saeed Turabzadeh</span>
                   </div>
-                </figure>
-                <div class="project-info mt-3" style="padding: 0 10px;">
-                  <h5>Leadership Lessons from Engineering Teams</h5>
-                  <p class="small text-muted"><i class="bi bi-calendar"></i> March 20, 2026</p>
-                  <p class="small">Key insights from 7+ years leading cross-functional teams.</p>
                 </div>
-              </article>
-            </div><!-- End Blog Item -->
+              </a>
+            </article>
+          </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-tech">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/insight-lidar-vs-camera.webp" class="img-fluid" alt="LiDAR vs Camera" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Technical</div>
-                      <h3 class="entry-title">LiDAR vs Camera: Choosing the Right Sensors</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/insight-lidar-vs-camera.webp" class="glightbox" data-gallery="blog-gallery" data-glightbox="title: LiDAR vs Camera; description: A practical guide to selecting sensors for autonomous systems." title="Expand">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="insights/2026-03-05-lidar-vs-camera.html" title="Read More">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
+          <!-- Medium Post (top-right) -->
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="300">
+            <article class="insight-card insight-card-md">
+              <a href="insights/2026-03-20-leadership-in-tech.html" class="card-link-wrapper">
+                <div class="card-img-wrap">
+                  <img src="assets/img/portfolio/insight-leadership.webp" alt="Leadership Lessons" loading="lazy">
+                </div>
+                <div class="card-body-overlay">
+                  <span class="card-badge badge-leadership">Leadership</span>
+                  <h3>Leadership Lessons from Building Cross-Functional Engineering Teams</h3>
+                  <p class="card-excerpt">Key insights from 7+ years of leading engineering teams across international projects.</p>
+                  <div class="card-meta">
+                    <span><i class="bi bi-calendar3"></i> March 20, 2026</span>
                   </div>
-                </figure>
-                <div class="project-info mt-3" style="padding: 0 10px;">
-                  <h5>LiDAR vs Camera: Choosing the Right Sensors</h5>
-                  <p class="small text-muted"><i class="bi bi-calendar"></i> March 5, 2026</p>
-                  <p class="small">A practical guide to selecting sensors for autonomous systems.</p>
                 </div>
-              </article>
-            </div><!-- End Blog Item -->
+              </a>
+            </article>
+          </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-tech">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/insight-ai-deployment.webp" class="img-fluid" alt="Deploying AI in Production" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Technical</div>
-                      <h3 class="entry-title">Deploying AI Models in Production</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/insight-ai-deployment.webp" class="glightbox" data-gallery="blog-gallery" data-glightbox="title: Deploying AI in Production; description: Practical lessons on deploying deep learning models in real-time systems." title="Expand">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="insights/2026-02-15-deploying-ai-production.html" title="Read More">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
+        </div>
+
+        <!-- Bottom Row: 4 Small Posts -->
+        <div class="row g-4">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article class="insight-card insight-card-sm">
+              <a href="insights/2026-03-05-lidar-vs-camera.html" class="card-link-wrapper">
+                <div class="card-img-wrap">
+                  <img src="assets/img/portfolio/insight-lidar-vs-camera.webp" alt="LiDAR vs Camera" loading="lazy">
+                </div>
+                <div class="card-body-content">
+                  <span class="card-badge">Technical</span>
+                  <h4>LiDAR vs Camera: Choosing the Right Sensors</h4>
+                  <div class="card-meta">
+                    <span><i class="bi bi-calendar3"></i> March 5, 2026</span>
                   </div>
-                </figure>
-                <div class="project-info mt-3" style="padding: 0 10px;">
-                  <h5>Deploying AI Models in Production</h5>
-                  <p class="small text-muted"><i class="bi bi-calendar"></i> February 15, 2026</p>
-                  <p class="small">Practical lessons on deploying deep learning models in real-time systems.</p>
                 </div>
-              </article>
-            </div><!-- End Blog Item -->
+              </a>
+            </article>
+          </div>
 
-          </div><!-- End Blog Container -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <article class="insight-card insight-card-sm">
+              <a href="insights/2026-02-15-deploying-ai-production.html" class="card-link-wrapper">
+                <div class="card-img-wrap">
+                  <img src="assets/img/portfolio/insight-ai-deployment.webp" alt="Deploying AI in Production" loading="lazy">
+                </div>
+                <div class="card-body-content">
+                  <span class="card-badge">Technical</span>
+                  <h4>Deploying AI Models in Production</h4>
+                  <div class="card-meta">
+                    <span><i class="bi bi-calendar3"></i> February 15, 2026</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
 
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <article class="insight-card insight-card-sm">
+              <a href="insights/2026-01-25-edge-computing-autonomous.html" class="card-link-wrapper">
+                <div class="card-img-wrap">
+                  <img src="assets/img/portfolio/insight-edge-computing.webp" alt="Edge Computing for Autonomous Systems" loading="lazy">
+                </div>
+                <div class="card-body-content">
+                  <span class="card-badge">Technical</span>
+                  <h4>Edge Computing for Autonomous Systems</h4>
+                  <div class="card-meta">
+                    <span><i class="bi bi-calendar3"></i> January 25, 2026</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <article class="insight-card insight-card-sm">
+              <a href="insights/2026-01-10-safety-critical-software.html" class="card-link-wrapper">
+                <div class="card-img-wrap">
+                  <img src="assets/img/portfolio/insight-safety-critical.webp" alt="Building Safety-Critical Software" loading="lazy">
+                </div>
+                <div class="card-body-content">
+                  <span class="card-badge">Technical</span>
+                  <h4>Building Safety-Critical Software</h4>
+                  <div class="card-meta">
+                    <span><i class="bi bi-calendar3"></i> January 10, 2026</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- View All Link -->
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="600">
+          <a href="insights/index.html" class="btn-view-all">
+            View All Insights <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
 
       </div>
 
-    </section><!-- /Blog Section -->
+    </section><!-- /Insights Section -->
 
     <!-- Professional Endorsements Section -->
     <section id="endorsements" class="testimonials section">
