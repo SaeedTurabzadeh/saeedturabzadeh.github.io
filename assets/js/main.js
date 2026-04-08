@@ -194,11 +194,53 @@
   /**
    * Frequently Asked Questions Toggle
    */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle, .faq-item .faq-header').forEach((faqItem) => {
+  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle, .faq-item .faq-header, .faq-item .faq-question').forEach((faqItem) => {
     faqItem.addEventListener('click', () => {
       faqItem.parentNode.classList.toggle('faq-active');
     });
   });
+
+  /**
+   * FAQ Search Filter
+   */
+  const faqSearchInput = document.querySelector('#faqSearch');
+  if (faqSearchInput) {
+    faqSearchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      const allTabs = document.querySelectorAll('.faq-3 .tab-pane');
+      const allItems = document.querySelectorAll('.faq-3 .faq-item');
+      const tabBtns = document.querySelectorAll('.faq-3 .category-card');
+
+      if (query.length > 0) {
+        allTabs.forEach(tab => {
+          tab.classList.add('show', 'active');
+          tab.style.display = '';
+        });
+        tabBtns.forEach(btn => btn.classList.add('active'));
+
+        allItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? '' : 'none';
+        });
+      } else {
+        tabBtns.forEach((btn, i) => {
+          if (i === 0) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+        allTabs.forEach((tab, i) => {
+          if (i === 0) {
+            tab.classList.add('show', 'active');
+          } else {
+            tab.classList.remove('show', 'active');
+          }
+        });
+        allItems.forEach(item => item.style.display = '');
+      }
+    });
+  }
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
